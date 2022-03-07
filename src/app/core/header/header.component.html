@@ -1,0 +1,68 @@
+<nav class="menu">
+  <ul>
+    <button (click)="formCondicion = 'flex'">Añadir super</button>
+  </ul>
+  <ul>
+    <li>
+      <a routerLink="superheroes-y-villanos" routerLinkActive="active"
+        >Supers</a
+      >
+    </li>
+    <li>
+      <a routerLink="superheroes" routerLinkActive="active">Superhéroes</a>
+    </li>
+    <li><a routerLink="villanos" routerLinkActive="active">Villanos</a></li>
+  </ul>
+  <ul></ul>
+</nav>
+
+<section [ngStyle]="{ display: mensajeCondicion }">
+  <div class="mensaje">
+    <p>{{ mensaje }}</p>
+    <button (click)="refresh()">Aceptar</button>
+  </div>
+</section>
+
+<section [ngStyle]="{ display: formCondicion }">
+  <div class="mensaje">
+    <p>Editar Super</p>
+    <form [formGroup]="profileForm" autocomplete="off">
+      <label for="">Indentificador: </label>
+      <input
+        id="first-name"
+        type="text"
+        formControlName="id"
+        placeholder="Indentificador"
+      />
+      <label for="">Nombre: </label>
+      <input
+        id="first-name"
+        type="text"
+        formControlName="nombre"
+        placeholder="Nombre"
+      />
+      <label for="">Categoria: </label>
+      <input
+        id="first-name"
+        type="text"
+        formControlName="categoria"
+        placeholder="Categoria"
+      />
+      <label for="">Visibilidad: </label>
+      <input
+        id="first-name"
+        type="text"
+        formControlName="visibilidad"
+        placeholder="Visibilidad"
+      />
+      <label for="">Estado: </label>
+      <input
+        id="first-name"
+        type="text"
+        formControlName="estado"
+        placeholder="Estado"
+      />
+    </form>
+    <button (click)="insertar()">Aceptar</button>
+  </div>
+</section>

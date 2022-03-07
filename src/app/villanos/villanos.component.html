@@ -1,0 +1,64 @@
+<h3>Villanos ocultos habilitados ordenados de la Z - A</h3>
+
+<div>
+  <ul>
+    <li>Nombre</li>
+    <li>Categoria</li>
+    <li>Visibilidad</li>
+    <li>Estado</li>
+    <li>Eliminar</li>
+    <li><link rel="stylesheet" href="" />Actualizar</li>
+    <li><link rel="stylesheet" href="" />Ver detalles</li>
+  </ul>
+  <ul *ngFor="let item of resultado; let first = first">
+    <li>{{ item.nombre }}</li>
+    <li>{{ item.categoria }}</li>
+    <li>{{ item.visibilidad }}</li>
+    <li>{{ item.estado }}</li>
+    <li class="eliminar" (click)="eliminar(item.id)">Eliminar</li>
+    <li class="actualizar" (click)="modalActualizar(item)">Actualizar</li>
+    <li class="detalles" (click)="modalDetalles(item)">Ver detalles</li>
+  </ul>
+</div>
+<div *ngFor="let item of resultado; let first = first"></div>
+
+<section [ngStyle]="{ display: mensajeCondicion }">
+  <div class="mensaje">
+    <p>{{ mensaje }}</p>
+    <button (click)="ocultar('mensaje')">Aceptar</button>
+  </div>
+</section>
+
+<section [ngStyle]="{ display: formCondicion }">
+  <div class="mensaje">
+    <p>Editar Super</p>
+    <form [formGroup]="profileForm" autocomplete="off">
+      <label for="">Nombre: </label>
+      <input id="first-name" type="text" formControlName="nombre" />
+      <label for="">Categoria: </label>
+      <input id="first-name" type="text" formControlName="categoria" />
+      <label for="">Visibilidad: </label>
+      <input id="first-name" type="text" formControlName="visibilidad" />
+      <label for="">Estado: </label>
+      <input id="first-name" type="text" formControlName="estado" />
+    </form>
+    <button (click)="actualizar()">Aceptar</button>
+  </div>
+</section>
+
+<section [ngStyle]="{ display: detallesCondicion }">
+  <div class="mensaje">
+    <p>Detalles del super</p>
+    <form [formGroup]="profileForm" autocomplete="off">
+      <label for="">Nombre: </label>
+      <input type="text" value="{{ control.nombre.value }}" disabled />
+      <label for="">Categoria: </label>
+      <input type="text" value="{{ control.categoria.value }}" disabled />
+      <label for="">Visibilidad: </label>
+      <input type="text" value="{{ control.visibilidad.value }}" disabled />
+      <label for="">Estado: </label>
+      <input type="text" value="{{ control.estado.value }}" disabled />
+    </form>
+    <button (click)="ocultar()">Aceptar</button>
+  </div>
+</section>

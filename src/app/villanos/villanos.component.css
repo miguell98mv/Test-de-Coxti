@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  margin: 80px 0;
+  text-align: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+div ul {
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid black;
+}
+
+div ul li {
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
+  width: 100%;
+  color: #4b4b4b;
+}
+
+div ul:nth-child(1) li {
+  font-weight: 600;
+}
+
+div ul li.eliminar {
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(255, 73, 73);
+}
+
+div ul li.actualizar {
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(73, 94, 255);
+}
+
+div ul li.detalles {
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(255, 191, 73);
+}
+
+section {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000054;
+  z-index: 1000;
+}
+
+section div.mensaje {
+  margin: auto;
+  position: relative;
+  width: 300px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+section div.mensaje p {
+  font-weight: 500;
+  font-size: 20px;
+  color: #4b4b4b;
+}
+
+section div.mensaje button {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 20px;
+  width: fit-content;
+  color: white;
+  border: none;
+  background-color: rgb(73, 94, 255);
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+section div.mensaje form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+}
+
+section div.mensaje form label {
+  font-weight: 500;
+  text-align: start;
+  margin-top: 20px;
+  font-size: 17px;
+  color: #4b4b4b;
+}
+
+section div.mensaje form input {
+  padding: 10px 0;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  color: #777777;
+}
+section div.mensaje form input:disabled {
+  background: none;
+}

@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Hey Comic";
+  src: url("../../../assets/font/comic.ttf");
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+nav.menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(85, 85, 253);
+}
+
+nav.menu ul {
+  width: 100%;
+  margin: auto;
+}
+
+nav.menu button {
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  background-color: rgb(58, 192, 31);
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+nav ul li {
+  display: flex;
+  cursor: pointer;
+  margin: 30px 20px;
+  font-family: "Hey Comic";
+}
+
+nav ul li a {
+  margin: auto;
+  transition: 0.4s ease-out;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: rgb(255, 191, 73);
+}
+
+nav ul li a.active {
+  color: rgb(255, 191, 73);
+}
+
+section {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000054;
+  z-index: 1000;
+}
+
+section div.mensaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  width: 300px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+section div.mensaje p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: #4b4b4b;
+}
+
+section div.mensaje button {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 20px;
+  width: fit-content;
+  color: white;
+  border: none;
+  background-color: rgb(73, 94, 255);
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+section div.mensaje form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+}
+
+section div.mensaje form label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-align: start;
+  margin-top: 20px;
+  font-size: 17px;
+  color: #4b4b4b;
+}
+
+section div.mensaje form input {
+  font-family: "Roboto", sans-serif;
+  padding: 10px 0;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  color: #777777;
+}
+section div.mensaje form input:disabled {
+  background: none;
+}
